@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int e,m,s,c,h;
+    int total;
+    float average, percentage;
+    scanf("%d%d%d%d%d", &e,&m,&s,&c,&h);
+    total=e+m+s+c+h;
+    average= (e+m+s+c+h)/5;
+    percentage=(total/500.0)*100;
+    printf("%d %.2f %.2f", total, average, percentage);
+    return 0;
+}
