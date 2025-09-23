@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float radius, sides, area, per, length, width;
+    scanf("%f",&radius);
+    area = 3.1416326531*radius*radius;
+    per = 2*3.1416326531*radius;
+    printf("Circle: %.2f %.2f\n", area,per);
+    scanf("%f", &sides);
+    area = sides*sides;
+    per= 4*sides;
+    printf("Square: %.2f %.2f\n", area,per);
+    scanf("%f",&length);
+    scanf("%f", &width);
+    area = length*width;
+    per = 2*length + 2*width;
+    printf("Rectangle: %.2f %.2f\n", area,per);
+    return 0;
+}
