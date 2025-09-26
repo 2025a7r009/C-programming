@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    float C,F;
+    scanf("%f%f", &C,&F);
+    F= (C*9/5)+32;
+    printf("%.2F",F);
+    return 0;
+}
