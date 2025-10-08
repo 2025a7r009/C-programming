@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a,b,c,d,e;
+    float precentage_value;
+    char grade_here;
+     scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+     scanf("%f",&precentage_value);
+     scanf("%c",&grade_here);
+     precentage_value=(a+b+c+d+e)/5.0;
+     if (precentage_value>=90) {
+        grade_here = 'A';
+     } else if(precentage_value >= 80 && precentage_value < 90){
+        grade_here = 'B';
+     } else if(precentage_value >= 70 && precentage_value < 80){
+         grade_here = 'C';
+     } else if(precentage_value >= 60 && precentage_value < 70){
+        grade_here = 'D';
+     } else if(precentage_value >= 40 && precentage_value < 60){
+         grade_here = 'E'; 
+     }
+       else{
+          grade_here = 'F';
+       }
+    printf("Percentage = %.2f\n",precentage_value );
+    printf("Grade = %c",grade_here);
+    return 0;
+}
