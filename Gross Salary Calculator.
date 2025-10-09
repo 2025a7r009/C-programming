@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int B;
+    float S=0;
+    scanf("%d", &B);
+    if(B<=10000){
+        S=B+B/5+3*B/10;
+        printf("%.2f",S);
+    }
+    else if(B<=20000){
+        S=B+B/4+2*B/5;
+        printf("%.2f",S);
+    }
+    else{
+        S=B+3*B/10+B/2;
+        printf("%.2f",S);
+    }
+    return 0;
+}
