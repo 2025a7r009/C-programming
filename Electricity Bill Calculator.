@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int U;
+    scanf("%d", &U);
+
+    float bill = 0.0;
+
+    if (U <= 50) {
+        bill = U * 0.50;
+    } else if (U <= 150) {
+        bill = 50 * 0.50 + (U - 50) * 0.75;
+    } else if (U <= 250) {
+        bill = 50 * 0.50 + 100 * 0.75 + (U - 150) * 1.20;
+    } else {
+        bill = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (U - 250) * 1.50;
+    }
+
+    bill = bill * 1.2;
+    printf("%.2f", bill);
+
+    return 0;
+}
