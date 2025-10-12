@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int N,X,sum=0;
+    scanf("%d",&N);
+    X=N;
+    if(X%2==0)
+        X=X-1;
+    else
+        X=N;
+    do{
+        sum=sum+X;
+        X=X-2;
+    }
+    while(X>0);
+    printf("%d",sum);
+    return 0;
+}
