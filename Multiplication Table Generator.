@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int N,i,mult;
+    scanf("%d",&N);
+    i=1;
+    do{
+        mult=N*i;
+        printf("%d x %d = %d\n",N,i,mult);
+        i++;
+    }
+    while(i<=10);
+    return 0;
+}
