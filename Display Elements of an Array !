@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int size;
+    scanf("%d", &size);
+    int stu[size];
+    for(int i=0; i<size; i++){
+    scanf("%d",&stu[i]);
+    printf("%d ",stu[i]);
+    }
+    return 0;
+}
