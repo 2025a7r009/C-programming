@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+   int max=-1000,N,A,I;
+    scanf("%d",&N);
+    for(I=1;I<=N;I++){
+        scanf("%d",&A);
+        if(A>max)max=A;
+    }
+    printf("%d",max);
+    return 0;
+}
