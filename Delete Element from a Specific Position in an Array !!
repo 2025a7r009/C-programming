@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {   
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int k;
+    scanf("%d",&k);
+    for(int i = k-1; i < n-1; i++){
+        arr[i]=arr[i+1];
+    }
+    if(k<1||k>n) {printf("Invalid position");
+                  }
+    for(int i=0;i<n-1;i++){
+        printf("%d ",arr[i]);
+    }
+    
+    return 0;
+}
