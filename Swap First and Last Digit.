@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    int last=n%10;
+    int first=n;
+    while(first>=10){
+        first=first/10;
+    }
+    int count=n,x=0;
+    while(count!=0){
+        count=count/10;
+        x++;
+    }int mid=n%(int)pow(10,x-1);
+    mid=mid/10;
+    int new=last*pow(10,x-1)+mid*10+first;
+    printf("%d", new);
+    return 0;
+}
