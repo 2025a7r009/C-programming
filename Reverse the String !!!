@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char arr[10001];
+    fgets(arr,10001,stdin);
+    int rev=strlen(arr);
+    if(arr[rev-1]=='\n'){
+        rev--;
+    }
+    for(int i=rev-1;i>=0;i--){
+        printf("%c",arr[i]);
+    }
+    return 0;
+}
