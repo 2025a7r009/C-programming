@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char str[1001];
+    fgets(str, 1001, stdin);
+
+    // remove newline
+    str[strcspn(str, "\n")] = '\0';
+
+    int left = 0;
+    int right = strlen(str) - 1;
+
+    while (left < right) {
+        if (tolower(str[left]) != tolower(str[right])) {
+            printf("Not Palindrome");
+            return 0;
+        }
+        left++;
+        right--;
+    }
+
+    printf("Palindrome");
+    return 0;
+}
