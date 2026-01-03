@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char str1[100],str2[100],str3[100],str4[100],str5[100];
+    gets(str1);
+    gets(str2);
+    gets(str3);
+    gets(str4);
+    gets(str5);
+    
+    printf("Roll Number: %s\n",str1);
+    printf("Name: %s\n",str2);
+    printf("Branch: %s\n",str3);
+    printf("Section: %s\n",str4);
+    printf("College: %s\n",str5);
+    return 0;
+}
