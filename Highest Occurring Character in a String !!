@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char str[10001];
+    fgets(str,10001,stdin);
+    int freq[256]={0};
+    for(int i=0;str[i]!='\0';i++){
+        freq[(unsigned char)str[i]]++;
+    }
+    int max=0;
+    char result;
+      for(int i=0;str[i]!='\0';i++){
+      if(freq[(unsigned char)str[i]]>max){
+          max=freq[(unsigned char)str[i]];
+          result=str[i];
+      }
+      }
+      printf("%c occurs %d times",result,max);
+    
+    return 0;
+}
