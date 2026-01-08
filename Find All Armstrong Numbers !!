@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int count(int n){
+    int count=0;
+    do{
+        n=n/10;
+        count++;
+    }while(n!=0);
+    return count;
+    }
+int arm(int n){
+    int original=n;
+    int sum=0;
+    int digit=count(n);
+    while(n!=0){
+        sum+=pow(n%10,digit);
+        n=n/10;
+    }
+        return(sum==original);
+}
+
+int main() {
+    int n,m;
+    int found=0;
+    scanf("%d %d",&n,&m);
+    for(int i=n;i<=m;i++){
+        if(arm(i)){
+            printf("%d ",i);
+            found=1;
+        }
+    }
+    if(!found){
+        printf("No Armstrong numbers found");
+    }
+    
+    return 0;
+}
