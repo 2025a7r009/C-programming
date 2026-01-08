@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <math.h>
+
+int prime(int n) {
+    if (n <= 1) return 0;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) return 0;
+    }
+    return 1;
+}
+
+int perfect(int n) {
+    int sum = 0;
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0) sum += i;
+    }
+    return sum == n;
+}
+
+int digit(int n) {
+    int count = 0;
+    do {
+        n /= 10;
+        count++;
+    } while (n != 0);
+    return count;
+}
+
+int arm(int n) {
+    int original = n;
+    int sum = 0;
+    int count = digit(n);
+    while (n != 0) {
+        int temp = n % 10;
+        int power = 1;
+        for (int i = 0; i < count; i++) {
+            power *= temp;
+        }
+        sum += power;
+        n /= 10;
+    }
+    return sum == original;
+}
+
+int main() {
+    int n;
+    if (scanf("%d", &n) != 1) {
+        printf("Invalid input");
+        return 1;
+    }
+
+    int found = 0;
+    if (prime(n)) {
+        printf("Prime Number");
+        found = 1;
+    }
+    if (perfect(n)) {
+        if (found) printf(", ");
+        printf("Perfect Number");
+        found = 1;
+    }
+    if (arm(n)) {
+        if (found) printf(", ");
+        printf("Armstrong Number");
+        found = 1;
+    }
+    if (!found) {
+        printf("None of these");
+    }
+    return 0;
+}
