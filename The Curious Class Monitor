@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    struct id{
+        char name[50];
+        int age;
+        char grade;
+    };
+    struct id student;
+    fgets(student.name,50,stdin);
+    scanf("%d",&student.age);
+    scanf(" %c",&student.grade);
+    printf("Name: %s",student.name);
+    printf("Age: %d\n",student.age);
+    printf("Grade: %c\n",student.grade);
+    return 0;
+}
