@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int area(int l,int b){
+    return l*b;
+}
+int peri(int l,int b){
+    return (2*l+2*b);
+}
+
+int main() {
+    struct measure{
+        int l;
+        int b;
+    };
+    struct measure rect;
+    scanf("%d",&rect.l);
+    scanf("%d",&rect.b);
+    int a=area(rect.l,rect.b);
+    int p=peri(rect.l,rect.b);
+    printf("Area: %d\n",a);
+    printf("Perimeter: %d\n",p);
+    return 0;
+}
