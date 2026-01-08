@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    struct info{
+        char name[50];
+        int day;
+        int month;
+        int year;
+    };
+    struct info stud;
+    fgets(stud.name,50,stdin);
+    scanf("%d %d %d",&stud.day,&stud.month,&stud.year);
+    printf("Name: %s",stud.name);
+    printf("Date of Birth: %d/%d/%d",stud.day,stud.month,stud.year);
+    return 0;
+}
