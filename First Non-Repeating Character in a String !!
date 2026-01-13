@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char arr[1000];
+    fgets(arr,1000,stdin);
+    int freq[256]={0};
+    for(int i=0;arr[i]!=0;i++){
+        freq[arr[i]]++;
+    }
+    for(int i=0;arr[i]!=0;i++){
+        if(freq[arr[i]]==1){
+            printf("%c",arr[i]);
+            return 0;
+        }
+    }
+    printf("-1");
+    return 0;
+}
