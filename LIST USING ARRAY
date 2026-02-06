@@ -1,0 +1,46 @@
+//implentation of list using array
+#include<stdio.h>
+int main(){
+    while(1){
+        printf("1. Insert In Beginning\n");
+        printf("2. Insert At End\n");
+        printf("3. Insert At Any Position\n");
+        printf("4. Delete From Beginning\n");
+        printf("5. Delete From End");
+        printf("6. Delete From Any Position\n");
+        printf("7. Display List\n");
+        printf("8. Search Element In List\n");
+        printf("9. Update Element In List\n");
+        printf("10. Sort Element In List\n");
+        printf("11. Exit\n");
+        int choice;
+        printf("Enter Choice: ");
+        scanf("%d", &choice);
+        switch(choice){
+            case 1:
+            break;
+            case 2:
+            break;
+            case 3:
+            break;
+            case 4:
+            break;
+            case 5:
+            break;
+            case 6:
+            break;
+            case 7:
+            break;
+            case 8:
+            break;
+            case 9:
+            break;
+            case 10:
+            break;
+            case 11:
+            break;
+        }
+
+    }
+    return 0;
+}
